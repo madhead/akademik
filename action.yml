@@ -1,0 +1,5 @@
+name: 'akademik'
+description: 'Render documentation to Confluence'
+runs:
+  using: 'docker'
+  image: 'ghcr.io/madhead/akademik:latest'
