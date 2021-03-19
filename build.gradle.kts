@@ -16,8 +16,14 @@ application {
     mainClass.set("me.madhead.akademik.AkademikKt")
 }
 
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(Versions.JVM))
+    }
+}
+
 tasks {
     withType<KotlinCompile> {
-        kotlinOptions.jvmTarget = Versions.JVM
+        kotlinOptions.jvmTarget = "${Versions.JVM}"
     }
 }
