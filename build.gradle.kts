@@ -24,6 +24,9 @@ java {
 
 tasks {
     withType<KotlinCompile> {
-        kotlinOptions.jvmTarget = "${Versions.JVM}"
+        kotlinOptions {
+            jvmTarget = "${Versions.JVM}"
+            useIR = true
+        }
     }
 }
