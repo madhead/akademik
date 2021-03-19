@@ -5,7 +5,7 @@ object Versions {
     /**
      * Target JVM.
      */
-    const val JVM = "11"
+    const val JVM = 11
 
     /**
      * Gradle plugins versions.
