@@ -10,7 +10,7 @@ jobs:
       - uses: madhead/check-gradle-version@v1
     continue-on-error: true
   check:
-    name: Default
+    name: Check
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2

@@ -1,0 +1,18 @@
+name: PR to master
+on:
+  pull_request:
+    branches:
+      - master
+jobs:
+  check-version-bumped:
+    name: Check version bumped
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.pull_request.base.sha }}
+      - uses: christian-draeger/read-properties@1.0.1
+        with:
+          path: 'gradle.properties'
+          property: 'version'
+      - run: echo ${{ github.event.pull_request.base.sha }}
